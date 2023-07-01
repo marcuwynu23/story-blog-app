@@ -10,8 +10,10 @@
   "author": "Mark Wayne Menorca",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^4.17.3",
     "express-session": "^1.17.2",
+    "mongoose": "^7.3.1",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15",
     "nunjucks": "^3.2.3"

@@ -1,0 +1,16 @@
+{% extends 'initial/layout.html' %}
+{% block content %}
+<div class="d-flex justify-content-center">
+  <div class="container bg-light p-4 shadow-sm border">
+    <div class="text-center">
+      <h4>{{story.title}}</h4>
+      <sub>by: {{story.author}}</sub>
+    </div>
+    <div class="container px-2 py-3">
+      <p class="text-left">
+        {{story.content}}
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'initial/layout.html' %}
+{% block content %}
+<div class="container p-2">
+	<div class="d-flex justify-content-center">
+		<div class="container">
+			<h3 class="fw-bolder">Update Story</h3>
+			<div>
+				<form method="post"
+					action="/story/update/{{story.id}}">
+					<div>
+						<label class="form-control px-0"
+							for="">Story Title</label>
+						<input type="text"
+							class="form-control "
+							name="title"
+							value="{{story.title}}"
+							placeholder="Story title">
+						<label class="form-control  px-0"
+							for="">Story Author</label>
+						<input type="text"
+							class="form-control "
+							name="author"
+							value="{{story.author}}"
+							placeholder="Author">
+						<label class="form-control  px-0"
+							for="">Story Tags</label>
+						<input type="text"
+							class="form-control "
+							name="tags"
+							value="{{story.tags}}"
+							placeholder="tags">
+						<div class="py-2">
+							<textarea id="story-content" name="content">{{story.content}}</textarea>
+						</div>
+						<button class="btn btn-sm btn-primary py-2"
+							type="submit">update</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'initial/layout.html' %}
+{% block content %}
+<div class="container p-2">
+	<h3 class="fw-bolder">Stories</h3>
+	<div>
+		<a href="/story/create"><button class="btn btn-primary p-2 m-2 shadow-sm ">Create Story</button></a>
+		<ul class="list-group">
+			{% for story in context.stories %}
+			<li class="list-group-item shadow-sm border bg-light p-3 m-2">
+				<div>
+					<p class="fw-bold h5">{{ story.title}}</p>
+					<sub class="fw-light fs-8">Author: {{ story.author}}</sub>
+					<div class="mt-4">
+						<a href="/story/show/{{story.id}}"><button class="btn btn-sm btn-success">Open</button></a>
+						<a href="/story/edit/{{story.id}}"><button class="btn btn-sm btn-warning">Edit</button></a>
+						<a href="/story/remove/{{story.id}}"><button class="btn btn-sm btn-danger">Remove</button></a>
+					</div>
+				</div>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+
+</div>
+{% endblock %}
